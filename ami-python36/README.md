@@ -22,6 +22,7 @@ You can also specify a custom docker username like so:
 
 ```
 $ make DOCKER_USER=launchpadrecruits
+```
 
 ## Usage
 
