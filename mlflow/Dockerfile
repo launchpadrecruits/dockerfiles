@@ -12,6 +12,6 @@ EXPOSE 5000
 
 CMD mlflow server \
     --file-store /mlflow \
-    --default-artifact-root s3://${bucket} \
+    --default-artifact-root s3://${BUCKET}/mlflow-artifacts \
     --host 0.0.0.0
 
