@@ -4,6 +4,7 @@ A Dockerfile that produces a Python 3.6 image with [MLflow](https://www.mlflow.o
 
 ## Build
 
+First, edit the `MLFLOW_VERSION` variable from the `Dockerfile` to the latest.
 
 This example creates the image with the tag `launchpadrecruits/mlflow`, but you can change this to use your own username.
 
