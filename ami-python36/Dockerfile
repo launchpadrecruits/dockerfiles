@@ -8,6 +8,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 
 RUN yum -y install \
     which \
+    sudo \
     python36 \
     python36-pip \
     python36-devel \
