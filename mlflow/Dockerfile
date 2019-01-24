@@ -1,7 +1,7 @@
 FROM python:3.6
 LABEL maintainer="Jose Rivera <jose@launchpadrecruits.com>"
 
-ENV MLFLOW_VERSION 0.8.0
+ENV MLFLOW_VERSION 0.8.1
 ENV TERM linux
 ENV BUCKET bucket
 
@@ -16,3 +16,8 @@ CMD mlflow server \
     --default-artifact-root s3://${BUCKET}/mlflow-artifacts \
     --host 0.0.0.0
 
+# # If access logs needed:
+# CMD mlflow server \
+#     --file-store /mlflow \
+#     --default-artifact-root s3://${BUCKET}/mlflow-artifacts \
+#     --host 0.0.0.0 --gunicorn-opts "--access-logfile -"
