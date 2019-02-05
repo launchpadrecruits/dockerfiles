@@ -1,7 +1,7 @@
 FROM python:3.6
 LABEL maintainer="Jose Rivera <jose@launchpadrecruits.com>"
 
-ENV MLFLOW_VERSION 0.8.1
+ENV MLFLOW_VERSION 0.8.2
 ENV TERM linux
 ENV BUCKET bucket
 
