@@ -1,7 +1,7 @@
 FROM python:3.6
 LABEL maintainer="Jose Rivera <jose@launchpadrecruits.com>"
 
-ENV MLFLOW_VERSION 1.0.0
+ENV MLFLOW_VERSION 1.2.0
 ENV BACKEND_URI db_type://<user_name>:<password>@<host>:<port>/<database_name>
 ENV TERM linux
 ENV BUCKET bucket
