@@ -12,6 +12,8 @@ RUN mkdir -p /mlflow/
 
 ADD extra-requirements.txt /mlflow/
 
+WORKDIR /mlflow/
+
 RUN pip install -r extra-requirements.txt
 
 EXPOSE 5000

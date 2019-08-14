@@ -25,6 +25,16 @@ You can also specify a custom Docker username like so:
 $ make DOCKER_USER=launchpadrecruits
 ```
 
+This will set the `latest` tag to the docker image. So you need to add `VERSION` to the
+`docker tag` command:
+
+```
+docker tag launchpadrecruits/mlflow:latest launchpadrecruits/mlflow:VERSION
+
+# Example
+docker tag launchpadrecruits/mlflow:latest launchpadrecruits/mlflow:1.2.0
+```
+
 ## Usage
 
 To run this image
