@@ -1,7 +1,7 @@
 FROM python:3.6
 LABEL maintainer="Jose Rivera <jose@launchpadrecruits.com>"
 
-ENV MLFLOW_VERSION 1.3.0
+ENV MLFLOW_VERSION 1.4.0
 ENV BACKEND_URI db_type://<user_name>:<password>@<host>:<port>/<database_name>
 ENV TERM linux
 ENV BUCKET bucket
@@ -15,6 +15,13 @@ ADD extra-requirements.txt /mlflow/
 WORKDIR /mlflow/
 
 RUN pip install -r extra-requirements.txt
+
+# Install latest RDS SSL/TLS certs
+RUN mkdir -p /usr/local/share/ca-certificates/rds
+RUN curl "https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem" --output /usr/local/share/ca-certificates/rds/rds-ca-2019-root.pem \
+  && curl "https://s3.amazonaws.com/rds-downloads/rds-ca-2019-eu-west-2.pem" --output /usr/local/share/ca-certificates/rds/rds-ca-2019-eu-west-2.pem \
+  && update-ca-certificates
+
 
 EXPOSE 5000
 
