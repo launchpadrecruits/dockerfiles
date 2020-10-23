@@ -1,4 +1,4 @@
-# docker-ami-python37
+# docker-python38-slim-buster
 
 A Dockerfile that produces a Debian Buster Slim image with Python 3.8. installed.
 
